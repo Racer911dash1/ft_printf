@@ -6,21 +6,11 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 11:27:36 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/08 16:12:39 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/08 16:31:17 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
-static int	ft_is_zero(unsigned int x)
-{
-	if (x == 0)
-	{
-		write (1, "0", 1);
-		return (1);
-	}
-	return (0);
-}
 
 static void	ft_int_to_hex(unsigned int x, char *base)
 {

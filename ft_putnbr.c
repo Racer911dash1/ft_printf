@@ -6,41 +6,11 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 10:25:49 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/08 15:27:12 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/08 16:32:24 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
-static int	ft_is_int_min(int i)
-{
-	if (i == INT_MIN)
-	{
-		write(1, "-2147483648", 11);
-		return (1);
-	}
-	return (0);
-}
-
-static int	ft_is_zero(int i)
-{
-	if (i == 0)
-	{
-		write(1, "0", 1);
-		return (1);
-	}
-	return (0);
-}
-
-static int	ft_less_than_zero(int i)
-{
-	if (i < 0)
-	{
-		write(1, "-", 1);
-		return (1);
-	}
-	return (0);
-}
 
 void	ft_putnbr(va_list args)
 {
