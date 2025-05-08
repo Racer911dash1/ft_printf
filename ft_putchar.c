@@ -6,16 +6,17 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 10:05:49 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/08 15:27:11 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/08 17:25:19 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putchar(va_list args)
+int	ft_putchar(va_list args)
 {
 	char	c;
 
 	c = (char)va_arg(args, int);
 	write(1, &c, 1);
+	return (1);
 }

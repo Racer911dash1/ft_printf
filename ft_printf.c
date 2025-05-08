@@ -6,28 +6,32 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:57:51 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/08 16:24:21 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/08 17:43:38 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static void	ft_conversions(char specifier, va_list args)
+static int	ft_conversions(char specifier, va_list args)
 {
+	int	i;
+
+	i = 1;
 	if (specifier == 'c')
-		ft_putchar(args);
+		i = ft_putchar(args);
 	else if (specifier == 's')
-		ft_putstr(args);
+		i = ft_putstr(args);
 	else if (specifier == 'p')
-		ft_putptr(args);
+		i = ft_putptr(args);
 	else if (specifier == 'i' || specifier == 'd')
-		ft_putnbr(args);
+		i = ft_putnbr(args);
 	else if (specifier == 'u')
-		ft_putunbr(args);
+		i = ft_putunbr(args);
 	else if (specifier == 'x' || specifier == 'X')
-		ft_putbase(args, specifier);
+		i = ft_putbase(args, specifier);
 	else if (specifier == '%')
 		write(1, "%", 1);
+	return (i);
 }
 
 /*
@@ -36,16 +40,23 @@ static void	ft_conversions(char specifier, va_list args)
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
+	int		string_length;
+	int		i;
 
+	i = 0;
+	string_length = 0;
 	va_start(args, format);
-	while (*format)
+	while (format[i])
 	{
-		if (*format == '%' && *(format + 1))
-			ft_conversions(*(++format), args);
+		if (format[i] == '%' && format[i + 1])
+			string_length += ft_conversions(format[++i], args);
 		else
-			write(1, format, 1);
-		format++;
+		{
+			write(1, &format[i], 1);
+			string_length++;
+		}
+		i++;
 	}
 	va_end(args);
-	return (0);
+	return (string_length);
 }
