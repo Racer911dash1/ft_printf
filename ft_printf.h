@@ -6,7 +6,7 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:59:02 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/08 17:31:20 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/12 13:16:35 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 int	ft_is_zero(int nbr);
 int	ft_less_than_zero(int nbr);
 int	ft_is_int_min(int nbr);
+int	ft_strlen(char *str);
 int	ft_printf(const char *format, ...);
 int	ft_putbase(va_list args, char specifier);
 int	ft_putchar(va_list args);
