@@ -6,20 +6,18 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:59:02 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/16 13:01:51 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/16 14:47:55 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-//# include "../../milestone0/libft/libft.h"
 # include <unistd.h> // write()
 # include <stdarg.h> // va_
 # include <limits.h> // INT_MAX && INT_MIN
 # include <stdint.h> // uintptr_t
 
 int	ft_is_zero(int nbr);
-int	ft_length_of_num(int n);
 int	ft_less_than_zero(int nbr);
 int	ft_is_int_min(int nbr);
 int	ft_printf(const char *format, ...);

@@ -6,28 +6,11 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 16:29:45 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/16 13:01:37 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/16 14:46:26 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_length_of_num(int n)
-{
-	size_t	len;
-
-	len = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-		len++;
-	while (n != 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
 
 int	ft_is_zero(int nbr)
 {
