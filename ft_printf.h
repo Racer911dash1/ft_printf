@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:59:02 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/12 13:16:35 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/16 13:01:51 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 //# include "../../milestone0/libft/libft.h"
 # include <unistd.h> // write()
 # include <stdarg.h> // va_
@@ -19,9 +19,9 @@
 # include <stdint.h> // uintptr_t
 
 int	ft_is_zero(int nbr);
+int	ft_length_of_num(int n);
 int	ft_less_than_zero(int nbr);
 int	ft_is_int_min(int nbr);
-int	ft_strlen(char *str);
 int	ft_printf(const char *format, ...);
 int	ft_putbase(va_list args, char specifier);
 int	ft_putchar(va_list args);

@@ -6,11 +6,11 @@
 /*   By: dbakker <dbakker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:57:51 by dbakker           #+#    #+#             */
-/*   Updated: 2025/05/08 17:43:38 by dbakker          ###   ########.fr       */
+/*   Updated: 2025/05/16 10:22:07 by dbakker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_conversions(char specifier, va_list args)
 {
@@ -45,6 +45,8 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	string_length = 0;
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	while (format[i])
 	{
